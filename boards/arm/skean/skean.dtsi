@@ -81,8 +81,6 @@
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
 
-        label = "KSCAN";
-
         diode-direction = "col2row";
         row-gpios
           = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -104,7 +102,6 @@
 
   vbatt: vbatt {
     compatible = "zmk,battery-voltage-divider";
-    label = "BATTERY";
     io-channels = <&adc 0>;
     output-ohms = <2000000>;
     full-ohms = <(2000000 + 806000)>;
